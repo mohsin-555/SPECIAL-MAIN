@@ -1,0 +1,1467 @@
+ 
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Happy Birthday Lamiya (Shizuka)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Stop search engines from showing this page -->
+  <meta name="robots" content="noindex, nofollow" />
+
+  <style>
+    /* -----------------------------------------
+       GLOBAL / LAYOUT
+       ----------------------------------------- */
+    :root {
+      --bg1: #0f172a;
+      --bg2: #1d3557;
+      --card-bg: rgba(15, 23, 42, 0.88);
+      --text-main: #f9fafb;
+      --text-soft: #e5e7eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      background: linear-gradient(135deg, #0f172a, #1d3557, #4c1d95);
+      background-size: 220% 220%;
+      animation: bgShift 18s ease-in-out infinite;
+    }
+
+    @keyframes bgShift {
+      0% { background-position: 0% 0%; }
+      50% { background-position: 100% 100%; }
+      100% { background-position: 0% 0%; }
+    }
+
+    .hidden {
+      display: none !important;
+    }
+
+    .center-wrapper {
+      width: 100%;
+      max-width: 900px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card {
+      background: radial-gradient(circle at top, rgba(148, 163, 184, 0.12), transparent),
+                  var(--card-bg);
+      border-radius: 24px;
+      padding: 22px 16px 26px;
+      box-shadow: 0 24px 45px rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(148, 163, 184, 0.45);
+      backdrop-filter: blur(18px);
+      text-align: center;
+    }
+
+    @media (min-width: 720px) {
+      .card {
+        padding: 34px 42px 38px;
+      }
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: none;
+      padding: 10px 22px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: transform 0.17s ease, box-shadow 0.17s ease,
+        background 0.17s ease, opacity 0.2s ease;
+      white-space: nowrap;
+      background: linear-gradient(135deg, #7ee8fa, #80ffea, #ff8fab);
+      box-shadow: 0 14px 30px rgba(248, 250, 252, 0.25);
+      color: #0f172a;
+    }
+
+    .btn:hover {
+      transform: translateY(-1px) scale(1.02);
+      box-shadow: 0 18px 40px rgba(248, 250, 252, 0.35);
+    }
+
+    .btn:active {
+      transform: translateY(0) scale(0.98);
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.7);
+    }
+
+    /* -----------------------------------------
+       COUNTDOWN SCREEN
+       ----------------------------------------- */
+    #countdown-screen {
+      text-align: center;
+    }
+
+    .countdown-number {
+      font-size: 3.4rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.6em;
+      text-shadow: 0 0 18px rgba(248, 250, 252, 0.6);
+    }
+
+    @media (min-width: 640px) {
+      .countdown-number {
+        font-size: 4.4rem;
+      }
+    }
+
+    .countdown-label {
+      font-size: 0.95rem;
+      color: #e5e7eb;
+      opacity: 0.9;
+      margin-bottom: 18px;
+    }
+
+    /* -----------------------------------------
+       MAIN BIRTHDAY PAGE
+       ----------------------------------------- */
+    #main-page {
+      text-align: center;
+    }
+
+    .tagline {
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #e5e7eb;
+      opacity: 0.85;
+      margin-bottom: 10px;
+    }
+
+    .headline-wrapper {
+      margin-bottom: 6px;
+    }
+
+    .headline-main,
+    .headline-name {
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      text-shadow: 0 0 18px rgba(255, 255, 255, 0.25);
+    }
+
+    .headline-main {
+      font-size: clamp(1.6rem, 6vw, 2.5rem);
+      background: linear-gradient(90deg, #ffffff, #a5f3fc, #f9a8d4);
+      -webkit-background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 10px rgba(56, 189, 248, 0.8));
+    }
+
+    .headline-name {
+      font-size: clamp(1.5rem, 5.5vw, 2.3rem);
+      margin-top: 4px;
+      background: linear-gradient(90deg, #a5f3fc, #fbbf24, #f472b6);
+      -webkit-background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 10px rgba(248, 250, 252, 0.85));
+    }
+
+    .typing {
+      border-right: 2px solid rgba(248, 250, 252, 0.9);
+      white-space: nowrap;
+      overflow: hidden;
+    }
+
+    .subtitle {
+      font-size: 0.9rem;
+      color: var(--text-soft);
+      margin: 8px auto 16px;
+      max-width: 460px;
+    }
+
+    /* -----------------------------------------
+       PROFILE SECTION (shows after name)
+       ----------------------------------------- */
+    .profile-wrapper {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      opacity: 0;
+      transform: translateY(8px) scale(0.96);
+      transition: opacity 0.45s ease, transform 0.45s ease;
+      pointer-events: none;
+    }
+
+    .profile-wrapper.show {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: auto;
+    }
+
+    .profile-pic {
+      width: 82px;
+      height: 82px;
+      border-radius: 50%;
+      border: 3px solid rgba(248, 250, 252, 0.9);
+      object-fit: cover;
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.9);
+    }
+
+    @media (min-width: 640px) {
+      .profile-pic {
+        width: 96px;
+        height: 96px;
+      }
+    }
+
+    .profile-name {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #e5e7eb;
+      text-shadow: 0 0 10px rgba(15, 23, 42, 0.9);
+    }
+
+    /* -----------------------------------------
+       PRESENT / MEMORIES TRIGGER
+       ----------------------------------------- */
+    .present-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .present {
+      position: relative;
+      width: 150px;
+      height: 140px;
+      cursor: pointer;
+      transform-origin: center;
+      transition: transform 0.2s ease;
+    }
+
+    .present:hover {
+      transform: translateY(-3px) scale(1.02);
+    }
+
+    .present-box {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 140px;
+      height: 80px;
+      background: linear-gradient(145deg, #ff8fab, #f97316);
+      border-radius: 16px;
+      box-shadow: 0 18px 34px rgba(15, 23, 42, 0.9);
+    }
+
+    .present-lid {
+      position: absolute;
+      bottom: 75px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 150px;
+      height: 36px;
+      background: linear-gradient(145deg, #fee2e2, #fecaca);
+      border-radius: 20px;
+      box-shadow: 0 14px 26px rgba(15, 23, 42, 0.8);
+      transform-origin: center bottom;
+      transition: transform 0.5s ease-out;
+    }
+
+    .present-ribbon-vertical {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 120px;
+      background: linear-gradient(#fef9c3, #facc15);
+      border-radius: 999px;
+      opacity: 0.95;
+    }
+
+    .present-ribbon-horizontal {
+      position: absolute;
+      bottom: 26px;
+      left: 16px;
+      width: 110px;
+      height: 18px;
+      background: linear-gradient(#fef9c3, #facc15);
+      border-radius: 999px;
+      opacity: 0.95;
+    }
+
+    .present-bow-left,
+    .present-bow-right {
+      position: absolute;
+      bottom: 104px;
+      width: 30px;
+      height: 20px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 30% 30%, #fef9c3, #fb7185);
+      box-shadow: 0 0 12px rgba(248, 113, 133, 0.9);
+    }
+
+    .present-bow-left {
+      left: 50%;
+      transform: translateX(-36px) rotate(-18deg);
+    }
+
+    .present-bow-right {
+      left: 50%;
+      transform: translateX(6px) rotate(18deg);
+    }
+
+    .present-glow {
+      position: absolute;
+      bottom: 72px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120px;
+      height: 70px;
+      background: radial-gradient(circle at top, rgba(248, 250, 252, 0.8), transparent);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+
+    .present-label {
+      position: absolute;
+      top: -34px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.75);
+      font-size: 0.82rem;
+      color: #f9fafb;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.9);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+
+    .present.open .present-lid {
+      transform: translateX(-50%) translateY(-18px) rotateX(60deg);
+    }
+
+    .present.open .present-glow {
+      opacity: 1;
+    }
+
+    .present.open .present-label {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateX(-50%) translateY(-4px);
+    }
+
+    .helper-text {
+      margin-top: 18px;
+      font-size: 0.8rem;
+      color: #e5e7eb;
+      opacity: 0.9;
+    }
+
+    /* -----------------------------------------
+       MEMORIES FLOATING OVERLAY
+       ----------------------------------------- */
+    #memories-overlay {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(15, 23, 42, 0.35), rgba(15, 23, 42, 0.98));
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+      z-index: 10;
+      overflow: hidden;
+    }
+
+    #memories-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    #memories-overlay.fade-out {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .memory-photo {
+      position: absolute;
+      width: min(46vw, 190px);
+      height: auto;
+      opacity: 0.7;
+      filter: drop-shadow(0 10px 26px rgba(15, 23, 42, 0.9));
+      border-radius: 16px;
+      border: 2px solid rgba(248, 250, 252, 0.9);
+      mix-blend-mode: screen;
+      animation-name: floatUpCool;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+
+    /* smaller photos on phones to reduce lag */
+    @media (max-width: 640px) {
+      .memory-photo {
+        width: min(60vw, 130px);
+      }
+    }
+
+    @keyframes floatUpCool {
+      0% {
+        transform: translateY(110vh) translateX(0) scale(0.8) rotateZ(var(--angle, 0deg));
+        opacity: 0;
+      }
+      15% {
+        opacity: 1;
+      }
+      50% {
+        transform: translateY(15vh) translateX(6vw) scale(1.05) rotateZ(calc(var(--angle, 0deg) + 6deg));
+      }
+      80% {
+        transform: translateY(-10vh) translateX(-4vw) scale(1.08) rotateZ(calc(var(--angle, 0deg) - 4deg));
+        opacity: 0.9;
+      }
+      100% {
+        transform: translateY(-50vh) translateX(-8vw) scale(1.1) rotateZ(calc(var(--angle, 0deg) + 10deg));
+        opacity: 0;
+      }
+    }
+
+    .memories-title {
+      position: absolute;
+      top: 9%;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      font-size: clamp(1.1rem, 4.2vw, 1.5rem);
+      color: #f9fafb;
+      text-shadow: 0 0 18px rgba(248, 250, 252, 0.7);
+      z-index: 2;
+    }
+
+    /* -----------------------------------------
+       ENVELOPE / SCROLL LETTER PAGE
+       ----------------------------------------- */
+    #letter-page {
+      text-align: center;
+    }
+
+    #letter-page h2 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+    }
+
+    .envelope-page-sub {
+      font-size: 0.9rem;
+      color: #e5e7eb;
+      margin-bottom: 20px;
+    }
+
+    .envelope-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .envelope {
+      position: relative;
+      width: min(100%, 520px);
+      height: 250px;
+      perspective: 1200px;
+      cursor: pointer;
+      margin: 0 auto;
+    }
+
+    .envelope-body {
+      position: absolute;
+      inset: 56px 0 0;
+      margin: auto;
+      width: 90%;
+      background: linear-gradient(145deg, #fbbf77, #f5deb3);
+      border-radius: 0 0 18px 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.9);
+      overflow: hidden;
+    }
+
+    .envelope-flap {
+      position: absolute;
+      inset: 0;
+      margin: auto;
+      width: 90%;
+      height: 120px;
+      background: linear-gradient(145deg, #fcd9a9, #f5deb3);
+      clip-path: polygon(0 0, 100% 0, 50% 100%);
+      transform-origin: top center;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.8);
+      z-index: 3;
+      transition: transform 0.8s ease-out;
+    }
+
+    .envelope.open .envelope-flap {
+      transform: rotateX(180deg);
+    }
+
+    .envelope-front-text {
+      position: absolute;
+      inset: 100px 0 0;
+      margin: auto;
+      width: 70%;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 0.95rem;
+      color: #4b5563;
+      font-family:
+        "Lucida Handwriting",
+        "Segoe Script",
+        "Bradley Hand",
+        "Comic Sans MS",
+        cursive;
+      background: radial-gradient(circle at top, rgba(249, 250, 251, 0.6), transparent);
+      border-radius: 10px;
+      z-index: 2;
+      transition: opacity 0.4s ease;
+    }
+
+    .envelope.open .envelope-front-text {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .letter-paper {
+      position: absolute;
+      inset: 64px 0 0;
+      margin: auto;
+      width: 82%;
+      height: 86%;
+      background-image: url("pngtree-vector-vintage-kraft-paper-creative-background-picture-image_1120211.jpg");
+      background-size: cover;
+      background-position: center;
+      background-color: rgba(255, 248, 220, 0.88);
+      background-blend-mode: multiply;
+      border-radius: 12px;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.85);
+      transform: translateY(55%);
+      opacity: 0;
+      transition: transform 0.7s ease-out 0.3s, opacity 0.7s ease-out 0.3s;
+      overflow: hidden;
+      padding: 30px 18px 20px;
+      font-size: 0.88rem;
+      color: #1f2933;
+      line-height: 1.7;
+      pointer-events: none;
+      font-family:
+        "Lucida Handwriting",
+        "Segoe Script",
+        "Bradley Hand",
+        "Comic Sans MS",
+        cursive;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+    }
+
+    .envelope.open .letter-paper {
+      transform: translateY(-4%);
+      opacity: 1;
+    }
+
+    .envelope.detached {
+      height: auto;
+      cursor: default;
+      margin-top: 10px;
+    }
+
+    .envelope.detached .envelope-body,
+    .envelope.detached .envelope-flap,
+    .envelope.detached .envelope-front-text {
+      display: none;
+    }
+
+    .envelope.detached .letter-paper {
+      position: relative;
+      inset: auto;
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      transform: none;
+      opacity: 1;
+      margin: 0 auto;
+      pointer-events: auto;
+      overflow-y: auto;
+      max-height: 340px;
+    }
+
+    #letter-text {
+      white-space: pre-wrap;
+    }
+
+    .letter-nav {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: #4b5563;
+    }
+
+    .letter-nav button {
+      border-radius: 999px;
+      padding: 5px 11px;
+      font-size: 0.8rem;
+      border: none;
+      background: rgba(15, 23, 42, 0.85);
+      color: #f9fafb;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.8);
+    }
+
+    .letter-nav button:hover {
+      transform: translateY(-1px);
+    }
+
+    .letter-nav button:active {
+      transform: translateY(0);
+    }
+
+    /* -----------------------------------------
+       FULLSCREEN SCROLL OVERLAY
+       ----------------------------------------- */
+    .scroll-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      z-index: 60;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .scroll-overlay.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .scroll-container {
+      position: relative;
+      width: 100%;
+      max-width: 780px;
+      max-height: 96vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .scroll-paper {
+      width: 100%;
+      height: 100%;
+      max-height: 96vh;
+      background-image: url("pngtree-vector-vintage-kraft-paper-creative-background-picture-image_1120211.jpg");
+      background-size: cover;
+      background-position: center;
+      background-color: rgba(255, 248, 220, 0.9);
+      background-blend-mode: multiply;
+      border-radius: 18px;
+      box-shadow: 0 26px 80px rgba(0, 0, 0, 0.9);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+      padding: clamp(20px, 4vw, 36px);
+    }
+
+    .scroll-content {
+      width: 100%;
+      max-height: 82vh;
+      overflow-y: auto;
+      white-space: pre-wrap;
+      font-size: clamp(0.9rem, 1.1vw, 1rem);
+      line-height: 1.7;
+      color: #1f2933;
+      font-family:
+        "Lucida Handwriting",
+        "Segoe Script",
+        "Bradley Hand",
+        "Comic Sans MS",
+        cursive;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+      background-color: rgba(255, 250, 230, 0.9);
+      border-radius: 12px;
+      padding: 0.9rem 1rem;
+      box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
+    }
+
+    .scroll-nav {
+      margin-top: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #4b5563;
+    }
+
+    .scroll-nav button {
+      border-radius: 999px;
+      padding: 5px 12px;
+      font-size: 0.85rem;
+      border: none;
+      background: rgba(15, 23, 42, 0.9);
+      color: #f9fafb;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.8);
+    }
+
+    .scroll-nav button:hover {
+      transform: translateY(-1px);
+    }
+
+    .scroll-nav button:active {
+      transform: translateY(0);
+    }
+
+    .scroll-close {
+      position: absolute;
+      top: 10px;
+      right: 12px;
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: rgba(15, 23, 42, 0.9);
+      color: #f9fafb;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.9);
+    }
+
+    @media (max-width: 640px) {
+      .scroll-container {
+        max-width: 100%;
+      }
+    }
+
+    /* -----------------------------------------
+       HANGING HEARTS / STARS
+       ----------------------------------------- */
+    .hanging-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hanger {
+      position: absolute;
+      top: -14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      animation: gentleSwing 3.8s ease-in-out infinite alternate;
+      transform-origin: top center;
+    }
+
+    .hanger:nth-child(2) { animation-duration: 4.6s; }
+    .hanger:nth-child(3) { animation-duration: 4.1s; }
+    .hanger:nth-child(4) { animation-duration: 5.2s; }
+    .hanger:nth-child(5) { animation-duration: 4.4s; }
+    .hanger:nth-child(6) { animation-duration: 5.1s; }
+
+    .hanger-line {
+      width: 1px;
+      height: 120px;
+      background: rgba(248, 250, 252, 0.55);
+    }
+
+    .shape-heart,
+    .shape-star {
+      position: relative;
+      margin-top: 6px;
+    }
+
+    .shape-heart {
+      width: 20px;
+      height: 18px;
+      background: #fb7185;
+      transform: rotate(-45deg);
+      border-radius: 5px 5px 0 0;
+      box-shadow: 0 0 12px rgba(248, 113, 133, 0.9);
+    }
+
+    .shape-heart::before,
+    .shape-heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 18px;
+      background: #fb7185;
+      border-radius: 50%;
+    }
+
+    .shape-heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .shape-heart::after {
+      left: 10px;
+      top: 0;
+    }
+
+    .shape-star {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 16px solid #facc15;
+      filter: drop-shadow(0 0 10px rgba(250, 204, 21, 0.9));
+    }
+
+    .shape-star::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: -10px;
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 16px solid #facc15;
+    }
+
+    @keyframes gentleSwing {
+      0% { transform: rotate(-5deg); }
+      100% { transform: rotate(4deg); }
+    }
+
+    /* -----------------------------------------
+       FLOWERS (bottom)
+       ----------------------------------------- */
+    .flowers {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 130px;
+      pointer-events: none;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: flex-end;
+      z-index: 0;
+    }
+
+    .flower {
+      position: relative;
+      width: 50px;
+      height: 96px;
+      animation: flowerBob 5s ease-in-out infinite alternate;
+    }
+
+    @keyframes flowerBob {
+      0% { transform: translateY(6px); }
+      100% { transform: translateY(-4px); }
+    }
+
+    .flower-stem {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      width: 4px;
+      height: 66px;
+      background: linear-gradient(#166534, #22c55e);
+      border-radius: 999px;
+    }
+
+    .leaf {
+      position: absolute;
+      bottom: 24px;
+      width: 18px;
+      height: 10px;
+      background: radial-gradient(circle at 30% 30%, #bbf7d0, #16a34a);
+      border-radius: 20px 0 20px 0;
+    }
+
+    .leaf.left {
+      right: 50%;
+      transform: translateX(-8px) rotate(-26deg);
+    }
+
+    .leaf.right {
+      left: 50%;
+      transform: translateX(8px) rotate(26deg);
+    }
+
+    .flower-head-real {
+      position: absolute;
+      bottom: 56px;
+      left: 50%;
+      width: 42px;
+      height: 42px;
+      transform: translateX(-50%);
+    }
+
+    .petal-real {
+      position: absolute;
+      width: 24px;
+      height: 30px;
+      background: radial-gradient(circle at 30% 30%, #fef9c3, #fb7185);
+      border-radius: 999px;
+      box-shadow: 0 0 10px rgba(248, 113, 133, 0.8);
+    }
+
+    .petal-real:nth-child(1) { top: 0; left: 9px; }
+    .petal-real:nth-child(2) { top: 6px; left: -1px; transform: rotate(-30deg); }
+    .petal-real:nth-child(3) { top: 6px; right: -1px; transform: rotate(30deg); }
+    .petal-real:nth-child(4) { top: 16px; left: 3px; transform: rotate(-20deg); }
+    .petal-real:nth-child(5) { top: 16px; right: 3px; transform: rotate(20deg); }
+
+    .flower-center-real {
+      position: absolute;
+      inset: 11px;
+      margin: auto;
+      border-radius: 50%;
+      background: radial-gradient(circle at 30% 30%, #fef3c7, #f97316);
+      box-shadow: 0 0 14px rgba(248, 181, 0, 0.9);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- background music -->
+  <audio id="bg-music" src="music.mp3" loop preload="auto"></audio>
+
+  <!-- hanging hearts & stars -->
+  <div class="hanging-layer">
+    <div class="hanger" style="left: 10%;">
+      <div class="hanger-line"></div>
+      <div class="shape-heart"></div>
+      <div class="shape-star"></div>
+    </div>
+    <div class="hanger" style="left: 26%;">
+      <div class="hanger-line"></div>
+      <div class="shape-heart"></div>
+      <div class="shape-star"></div>
+    </div>
+    <div class="hanger" style="left: 42%;">
+      <div class="hanger-line"></div>
+      <div class="shape-heart"></div>
+      <div class="shape-star"></div>
+    </div>
+    <div class="hanger" style="right: 42%;">
+      <div class="hanger-line"></div>
+      <div class="shape-heart"></div>
+      <div class="shape-star"></div>
+    </div>
+    <div class="hanger" style="right: 26%;">
+      <div class="hanger-line"></div>
+      <div class="shape-heart"></div>
+      <div class="shape-star"></div>
+    </div>
+    <div class="hanger" style="right: 10%;">
+      <div class="hanger-line"></div>
+      <div class="shape-heart"></div>
+      <div class="shape-star"></div>
+    </div>
+  </div>
+
+  <!-- bottom flowers -->
+  <div class="flowers">
+    <div class="flower">
+      <div class="flower-stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+      <div class="flower-head-real">
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="flower-center-real"></div>
+      </div>
+    </div>
+    <div class="flower">
+      <div class="flower-stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+      <div class="flower-head-real">
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="flower-center-real"></div>
+      </div>
+    </div>
+    <div class="flower">
+      <div class="flower-stem"></div>
+      <div class="leaf left"></div>
+      <div class="leaf right"></div>
+      <div class="flower-head-real">
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="petal-real"></div>
+        <div class="flower-center-real"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- memories overlay -->
+  <div id="memories-overlay">
+    <div class="memories-title">Memories rising from our chats 💭</div>
+  </div>
+
+  <!-- main container -->
+  <div class="center-wrapper">
+    <!-- countdown -->
+    <div id="countdown-screen" class="card">
+      <div class="countdown-number" id="countdown-number">3</div>
+      <div class="countdown-label">Get Ready! For a Surprise from Nobitaa.</div>
+      <button id="surprise-btn" class="btn hidden">🎉 Surprise</button>
+    </div>
+
+    <!-- main birthday page -->
+    <div id="main-page" class="card hidden">
+      <div class="tagline">For my friend who lives in my heart</div>
+
+      <div class="headline-wrapper">
+        <div id="headline-line" class="headline-main typing"></div>
+        <div id="headline-name" class="headline-name typing"></div>
+      </div>
+
+      <!-- PROFILE (shows after name finishes typing) -->
+      <div id="profile" class="profile-wrapper">
+        <img src="images/dp1.jpg" alt="Shizuka profile" class="profile-pic" />
+        <div class="profile-name">Lamiya (Shizuka)</div>
+      </div>
+
+      <p class="subtitle">
+        My Shizuka — one of the best friends who lives in my heart 💖
+      </p>
+
+      <div class="present-wrapper">
+        <div id="present" class="present">
+          <div class="present-label" id="present-label">Open Memories</div>
+          <div class="present-glow"></div>
+          <div class="present-lid"></div>
+          <div class="present-box"></div>
+          <div class="present-ribbon-vertical"></div>
+          <div class="present-ribbon-horizontal"></div>
+          <div class="present-bow-left"></div>
+          <div class="present-bow-right"></div>
+        </div>
+      </div>
+
+      <div class="helper-text">
+        First tap the gift to open it. Then tap again to let the memories float up. ✨
+      </div>
+    </div>
+
+    <!-- letter / scroll page -->
+    <div id="letter-page" class="card hidden">
+      <h2>💌 Secret messages for Shizuka</h2>
+      <p class="envelope-page-sub">Tap the envelope. It will open, then the scroll will come out so you can read everything.</p>
+
+      <div class="envelope-wrapper">
+        <div id="envelope" class="envelope">
+          <div class="envelope-flap"></div>
+          <div class="envelope-body"></div>
+          <div class="envelope-front-text">Click this 💌</div>
+
+          <div class="letter-paper">
+            <div id="letter-text"></div>
+            <div class="letter-nav">
+              <span id="letter-progress"></span>
+              <button id="next-letter-btn">Next ➡</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- fullscreen button -->
+      <button id="fullscreen-letter-btn" class="btn" style="margin-top: 18px;">
+        📜 View Letter Full Screen
+      </button>
+    </div>
+  </div>
+
+  <!-- full-screen scroll overlay -->
+  <div id="scroll-overlay" class="scroll-overlay">
+    <div class="scroll-container">
+      <button id="close-scroll" class="scroll-close" aria-label="Close letter">&times;</button>
+      <div class="scroll-paper">
+        <div id="scroll-full-text" class="scroll-content"></div>
+        <div class="scroll-nav">
+          <button id="scroll-prev">⬅</button>
+          <span id="scroll-progress"></span>
+          <button id="scroll-next">➡</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      // ---------------- CONFIG ----------------
+      const ALL_IMAGES = [
+        'images/image1.jpg','images/image2.jpg','images/image3.jpg','images/image4.jpg','images/image5.jpg',
+        'images/image6.jpg','images/image7.jpg','images/image8.jpg','images/image9.jpg','images/image10.jpg',
+        'images/image11.jpg','images/image12.jpg','images/image13.jpg','images/image14.jpg','images/image15.jpg',
+        'images/image16.jpg','images/image17.jpg','images/image18.jpg','images/image19.jpg','images/image20.jpg',
+        'images/image21.jpg','images/image22.jpg','images/image23.jpg','images/image24.jpg','images/image25.jpg',
+        'images/image26.jpg','images/image27.jpg','images/image28.jpg','images/image29.jpg','images/image30.jpg',
+        'images/image31.jpg','images/image32.jpg','images/image33.jpg','images/image34.jpg','images/image35.jpg',
+        'images/image36.jpg'
+      ];
+
+      // fewer images on small devices to reduce lag
+      const isSmallScreen = window.innerWidth <= 640;
+      const images = isSmallScreen ? ALL_IMAGES.slice(0, 17) : ALL_IMAGES;
+
+      const MEMORY_SHOW_TOTAL = 13000;
+      const TYPE_DURATION_MS = 9000;
+
+      const LETTERS = [
+`Dear Shizuka, letter 1.
+
+I still think about the day we first talked — 14th September. It started as a normal chat, nothing special, but I didn’t know it would become the start of such a nice friendship. Slowly, our talks became longer, more comfortable, and more meaningful.
+
+Even though we have not known each other for very long, it feels like I’ve known you for years. You have a calm and warm way of talking that makes everything feel easy. Talking to you became a part of my day that I always look forward to.
+
+That first conversation changed a lot for me. It gave me a friend who feels close, even with distance between us. I’m really glad our paths crossed.
+
+With care,
+Mohsin`,
+
+`Dear Shizuka, letter 2.
+
+I still remember everything you told me about what you like. You love chocolates, chips, ice cream, and lollipops, and the way you talk about them always makes me smile. You enjoy small things with so much happiness, and that’s something I really appreciate about you.
+
+Your style also stays in my mind, your love for burkhas, hijabs, earrings, and flowers suits your gentle and peaceful nature. You have a simple but beautiful personality that feels soft and unique.
+
+You told me you enjoy traveling in a car. I hope one day you visit many new places, see beautiful views, and make memories that stay with you forever. Maybe, while traveling, you will remember this friendship too.
+
+Every chat we had, whether joking, laughing, or talking seriously, has become a memoryable value. You’re not just someone I talk to. You’re someone I truly enjoy having in my life.`,
+
+`That’s all I can say for now. I hope I will meet you once.
+
+Happy birthday again, my cutie friend. 💖`
+      ];
+
+      // ---------------- ELEMENTS ----------------
+      const countdownNumberEl = document.getElementById("countdown-number");
+      const surpriseBtn = document.getElementById("surprise-btn");
+      const countdownScreen = document.getElementById("countdown-screen");
+      const mainPage = document.getElementById("main-page");
+      const letterPage = document.getElementById("letter-page");
+      const bgMusic = document.getElementById("bg-music");
+
+      const headlineLineEl = document.getElementById("headline-line");
+      const headlineNameEl = document.getElementById("headline-name");
+      const profileEl = document.getElementById("profile");
+
+      const present = document.getElementById("present");
+      const presentLabel = document.getElementById("present-label");
+      const memoriesOverlay = document.getElementById("memories-overlay");
+
+      const envelope = document.getElementById("envelope");
+      const letterTextEl = document.getElementById("letter-text");
+      const nextLetterBtn = document.getElementById("next-letter-btn");
+      const letterProgressEl = document.getElementById("letter-progress");
+
+      const fullscreenBtn = document.getElementById("fullscreen-letter-btn");
+      const scrollOverlay = document.getElementById("scroll-overlay");
+      const scrollFullTextEl = document.getElementById("scroll-full-text");
+      const closeScrollBtn = document.getElementById("close-scroll");
+      const scrollPrevBtn = document.getElementById("scroll-prev");
+      const scrollNextBtn = document.getElementById("scroll-next");
+      const scrollProgressEl = document.getElementById("scroll-progress");
+
+      // ---------------- COUNTDOWN ----------------
+      let countdownValue = 3;
+
+      if (countdownNumberEl && surpriseBtn && countdownScreen && mainPage) {
+        countdownNumberEl.textContent = countdownValue;
+
+        const countdownInterval = setInterval(() => {
+          countdownValue--;
+          if (countdownValue > 0) {
+            countdownNumberEl.textContent = countdownValue;
+          } else {
+            clearInterval(countdownInterval);
+            countdownNumberEl.textContent = "";
+            surpriseBtn.classList.remove("hidden");
+          }
+        }, 1000);
+
+        surpriseBtn.addEventListener("click", () => {
+          countdownScreen.classList.add("hidden");
+          mainPage.classList.remove("hidden");
+          if (bgMusic) {
+            bgMusic.play().catch(() => {});
+          }
+          startHeadlineTyping();
+        });
+      }
+
+      // ---------------- HEADLINE TYPING + PROFILE ----------------
+      const headlineLineText = "Happy Birthday";
+      const headlineNameText = "Lamiya";
+
+      function typeText(element, text, totalDuration, callback) {
+        if (!element) return;
+        element.textContent = "";
+        const chars = Array.from(text);
+        let index = 0;
+        const delay = totalDuration / Math.max(chars.length, 1);
+
+        const interval = setInterval(() => {
+          element.textContent += chars[index];
+          index++;
+          if (index >= chars.length) {
+            clearInterval(interval);
+            element.classList.remove("typing");
+            if (callback) callback();
+          }
+        }, delay);
+      }
+
+      function showProfile() {
+        if (profileEl) {
+          profileEl.classList.add("show");
+        }
+      }
+
+      function startHeadlineTyping() {
+        typeText(headlineLineEl, headlineLineText, 1300, () => {
+          typeText(headlineNameEl, headlineNameText, 1100, () => {
+            showProfile();
+          });
+        });
+      }
+
+      // ---------------- PRESENT / MEMORIES ----------------
+      let presentOpened = false;
+      let memoriesPlayed = false;
+
+      if (present) {
+        present.addEventListener("click", () => {
+          if (!presentOpened) {
+            presentOpened = true;
+            present.classList.add("open");
+            if (presentLabel) presentLabel.classList.remove("hidden");
+            return;
+          }
+          if (!memoriesPlayed) {
+            memoriesPlayed = true;
+            playMemories();
+          }
+        });
+      }
+
+      function playMemories() {
+        if (!memoriesOverlay) return;
+        memoriesOverlay.classList.add("active");
+
+        images.forEach((src) => {
+          const img = document.createElement("img");
+          img.src = src;
+          img.className = "memory-photo";
+          const leftPercent = Math.random() * 100;
+          const angle = (Math.random() * 40 - 20).toFixed(1); // -20 to +20 deg
+          img.style.left = leftPercent + "vw";
+          img.style.setProperty("--angle", angle + "deg");
+          const delay = Math.random() * 3;
+          const duration = 8 + Math.random() * 5; // 8-13s
+          img.style.animationDuration = duration + "s";
+          img.style.animationDelay = delay + "s";
+          memoriesOverlay.appendChild(img);
+        });
+
+        setTimeout(() => {
+          memoriesOverlay.classList.add("fade-out");
+          setTimeout(() => {
+            memoriesOverlay.classList.remove("active");
+            if (mainPage) mainPage.classList.add("hidden");
+            if (letterPage) letterPage.classList.remove("hidden");
+          }, 700);
+        }, MEMORY_SHOW_TOTAL);
+      }
+
+      // ---------------- ENVELOPE / LETTER ----------------
+      let currentLetterIndex = 0;
+      let typingInterval = null;
+      let envelopeOpened = false;
+
+      if (envelope) {
+        envelope.addEventListener("click", () => {
+          if (!envelopeOpened) {
+            envelopeOpened = true;
+            envelope.classList.add("open");
+            showLetter(0);
+
+            setTimeout(() => {
+              envelope.classList.add("detached");
+            }, 850);
+          }
+        });
+      }
+
+      function showLetter(index) {
+        if (!letterTextEl || !letterProgressEl || !nextLetterBtn) return;
+
+        currentLetterIndex = index;
+        const text = LETTERS[index];
+
+        if (typingInterval) clearInterval(typingInterval);
+        letterTextEl.textContent = "";
+
+        if (index < LETTERS.length - 1) {
+          letterProgressEl.textContent = `Letter ${index + 1} of ${LETTERS.length}`;
+        } else {
+          letterProgressEl.textContent = "Last words";
+        }
+
+        const chars = Array.from(text);
+        let i = 0;
+        const delay = TYPE_DURATION_MS / Math.max(chars.length, 1);
+
+        typingInterval = setInterval(() => {
+          letterTextEl.textContent += chars[i];
+          i++;
+          if (i >= chars.length) {
+            clearInterval(typingInterval);
+          }
+        }, delay);
+
+        if (index === LETTERS.length - 1) {
+          nextLetterBtn.textContent = "❤️";
+        } else {
+          nextLetterBtn.textContent = "Next ➡";
+        }
+      }
+
+      if (nextLetterBtn) {
+        nextLetterBtn.addEventListener("click", (event) => {
+          event.stopPropagation();
+          if (currentLetterIndex < LETTERS.length - 1) {
+            showLetter(currentLetterIndex + 1);
+          } else if (envelope) {
+            envelope.style.transition = "transform 0.5s ease";
+            envelope.style.transform = "scale(1.03)";
+            setTimeout(() => {
+              envelope.style.transform = "scale(1)";
+            }, 500);
+          }
+        });
+      }
+
+      // ---------------- FULLSCREEN SCROLL ----------------
+      let currentScrollIndex = 0;
+
+      function updateScrollLetter(index) {
+        if (!scrollFullTextEl || !scrollProgressEl) return;
+
+        if (index < 0) index = 0;
+        if (index > LETTERS.length - 1) index = LETTERS.length - 1;
+        currentScrollIndex = index;
+
+        scrollFullTextEl.textContent = LETTERS[index];
+
+        if (index < LETTERS.length - 1) {
+          scrollProgressEl.textContent = `Letter ${index + 1} of ${LETTERS.length}`;
+        } else {
+          scrollProgressEl.textContent = "Last words";
+        }
+      }
+
+      function openScrollOverlay() {
+        if (!scrollOverlay) return;
+        updateScrollLetter(currentLetterIndex);
+        scrollOverlay.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeScrollOverlay() {
+        if (!scrollOverlay) return;
+        scrollOverlay.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+
+      if (fullscreenBtn) {
+        fullscreenBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          openScrollOverlay();
+        });
+      }
+
+      if (closeScrollBtn) {
+        closeScrollBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          closeScrollOverlay();
+        });
+      }
+
+      if (scrollPrevBtn) {
+        scrollPrevBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (currentScrollIndex > 0) {
+            updateScrollLetter(currentScrollIndex - 1);
+          }
+        });
+      }
+
+      if (scrollNextBtn) {
+        scrollNextBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          if (currentScrollIndex < LETTERS.length - 1) {
+            updateScrollLetter(currentScrollIndex + 1);
+          }
+        });
+      }
+
+      if (scrollOverlay) {
+        scrollOverlay.addEventListener("click", (e) => {
+          if (e.target === scrollOverlay) {
+            closeScrollOverlay();
+          }
+        });
+      }
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && scrollOverlay && scrollOverlay.classList.contains("active")) {
+          closeScrollOverlay();
+        }
+      });
+
+      // ensure music can start with any tap
+      document.addEventListener("click", () => {
+        if (bgMusic && bgMusic.paused) {
+          bgMusic.play().catch(() => {});
+        }
+      });
+    });
+  </script>
+</body>
+</html>
